@@ -1,20 +1,16 @@
 {
-  "GlobalConfiguration": {
-    "ServiceDiscoveryProvider": {
-      "Scheme": "http",
-      "Host": "localhost",
-      "Port": 8500,
-      "Type": "Consul"
-    }
-  },
+  "GlobalConfiguration": {},
   "Routes": [
     {
-      "ServiceName": "book-service",
-      "LoadBalancerOptions": {
-        "Type": "LeastConnection"
-      },
-      "DownstreamPathTemplate": "/api/books/{id}",
-      "DownstreamScheme": "http",
+      "ServiceName": "",
+      "DownstreamPathTemplate": "/users",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "jsonplaceholder.typicode.com",
+          "Port": 443
+        }
+      ],
       "UpstreamPathTemplate": "/metadata/users",
       "UpstreamHttpMethod": [ "Get" ]
     },

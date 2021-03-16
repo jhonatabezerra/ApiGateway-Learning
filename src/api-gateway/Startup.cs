@@ -8,7 +8,6 @@ using Microsoft.Extensions.Hosting;
 
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
-using Ocelot.Provider.Consul;
 
 namespace api_gateway
 {
@@ -32,8 +31,7 @@ namespace api_gateway
         {
             services
                 .AddOcelot(Configuration)
-                .AddTransientDefinedAggregator<BookDetailsAggregator>()
-                .AddConsul();
+                .AddTransientDefinedAggregator<BookDetailsAggregator>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
