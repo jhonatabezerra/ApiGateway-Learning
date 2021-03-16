@@ -7,6 +7,10 @@ namespace PricingService.Helpers
 {
     public static class BookPriceFactoryHelper
     {
+        /// <summary>
+        /// This method was used for creat fake informations
+        /// </summary>
+        /// <returns>List of Books</returns>
         public static List<BookPrice> GenerateBookPrices()
         {
             return new List<BookPrice>

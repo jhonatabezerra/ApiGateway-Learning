@@ -7,6 +7,10 @@ namespace BookService.Helpers
 {
     public static class BookFactoryHelper
     {
+        /// <summary>
+        /// This method was used for creat fake informations
+        /// </summary>
+        /// <returns>List of Books</returns>
         public static List<Book> CreateBooks()
         {
             return new List<Book>
